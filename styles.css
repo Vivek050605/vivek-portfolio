@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --blue: #1DB954;     /* Spotify green for a fresh blue-green vibe */
+  --orange: #FF7F50;   /* Coral orange */
+  --dark-bg: #121212;  /* Very dark background */
+  --dark-bg-alt: #181818;
+  --white: #FFFFFF;
+  --grey-light: #BBBBBB;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--white);
+  line-height: 1.6;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: var(--dark-bg-alt);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--blue);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: var(--grey-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: var(--orange);
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto 4rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 1rem 3rem;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--blue);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--grey-light);
+}
+
+.about h2, .skills h2, .contact h2, .languages h2,
+.projects-section h1, .certifications-section h1 {
+  color: var(--orange);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--orange);
+  padding-bottom: 0.25rem;
+  width: fit-content;
+}
+
+.skills-list div {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  color: var(--white);
+}
+
+.contact p, .languages ul {
+  font-size: 1.1rem;
+  color: var(--white);
+}
+
+.languages ul {
+  list-style: disc inside;
+}
+
+.project {
+  margin-bottom: 2rem;
+}
+
+.project h2 {
+  color: var(--blue);
+  margin-bottom: 0.3rem;
+}
+
+footer {
+  background-color: var(--dark-bg-alt);
+  color: var(--grey-light);
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.7);
+}
+
+.nav-links li a.active {
+  font-weight: 700;
+  color: var(--orange);
+  border-bottom: 3px solid var(--orange);
+  padding-bottom: 6px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--orange);
+  border-bottom: 3px solid var(--orange);
+}
+
+.project h2 a {
+  color: var(--blue);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.project h2 a:hover {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+.project {
+  background-color: var(--dark-bg-alt);
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.project p {
+  margin: 0.5rem 0 1rem 0;
+  font-size: 1.1rem;
+  color: var(--grey-light);
+}
+
+.certifications-section ul {
+  list-style: disc inside;
+  font-size: 1.1rem;
+  color: var(--white);
+  margin-top: 1rem;
+}
